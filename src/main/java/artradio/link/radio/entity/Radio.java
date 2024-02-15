@@ -24,8 +24,8 @@ public class Radio {
     @Column(name = "radio_slug")
     private String slug;
 
-    @Column(name = "radio_type")
-    private String type;
+    @Column(name = "radio_img")
+    private String img;
 
     @Column(name = "radio_description")
     private String description;
@@ -33,22 +33,21 @@ public class Radio {
     @Column(name = "radio_contact")
     private String contact;
 
-    @OneToMany(mappedBy = "type", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "radio", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<RadioType> radioTypes = new HashSet<>();
 
-    @OneToMany(mappedBy = "song", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "radio", cascade = CascadeType.ALL)
     private Set<RadioSong> radioSongs = new HashSet<>();
 
 
     // use RadioType bidirectional
     public void addRadioType(RadioType radioType) {
-        if (radioTypes == null) {
-            return;
+        if (this.radioTypes == null) {
+            this.radioTypes = new HashSet<>();
         }
-        radioTypes.add(radioType);
+        this.radioTypes.add(radioType);
         radioType.setRadio(this);
     }
-
     // use RadioSong bidirectional
     public void addRadioSong(RadioSong radioSong) {
         if (radioSongs == null) {

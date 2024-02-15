@@ -8,7 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "radio_song")
+@Table(name = "radio_songs")
 @Getter
 @Setter
 public class RadioSong {
@@ -20,7 +20,7 @@ public class RadioSong {
     @Column(name = "song_singer")
     private String singer;
 
-    @Column(name = "song_singer")
+    @Column(name = "song_name")
     private String name;
 
     @Column(name = "song_likes")

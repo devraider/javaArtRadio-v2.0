@@ -18,7 +18,7 @@ public class RadioType {
     @Column(name = "type_name")
     private String typeName;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "radio_id", nullable = false)
     private Radio radio;
 }
