@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
@@ -17,24 +18,28 @@ public class RadioSong {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "song_singer")
+    @Column(name = "singer")
     private String singer;
 
-    @Column(name = "song_name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "song_likes")
+    @Column(name = "likes")
     private long likes;
 
-    @Column(name = "song_dislikes")
+    @Column(name = "dislikes")
     private long dislikes;
 
     @Column(name = "youtube_id")
     private String youtubeId;
 
-    @Column(name = "date_radio_played")
+    @Column(name = "date_stream_played")
     @CreationTimestamp
-    private Date dateCreated;
+    private Date dateStreamPlayed;
+
+    @Column(name = "date_inserted")
+    @UpdateTimestamp
+    private Date dateInserted;
 
     @ManyToOne
     @JoinColumn(name = "radio_id", nullable = false)

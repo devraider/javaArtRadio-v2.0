@@ -18,19 +18,19 @@ public class Radio {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "radio_name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "radio_slug")
+    @Column(name = "slug")
     private String slug;
 
-    @Column(name = "radio_img")
+    @Column(name = "img")
     private String img;
 
-    @Column(name = "radio_description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "radio_contact")
+    @Column(name = "contact")
     private String contact;
 
     @OneToMany(mappedBy = "radio", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
