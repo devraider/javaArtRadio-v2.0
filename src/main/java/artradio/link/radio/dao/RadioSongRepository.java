@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RepositoryRestResource
 public interface RadioSongRepository extends JpaRepository<RadioSong, Long> {
 
-    Page<RadioSong> findByRadioName(@RequestParam("radio") String radio, Pageable pageable);
+    Page<RadioSong> findByRadioSlug(@RequestParam("slug") String slug, Pageable pageable);
 }
 
