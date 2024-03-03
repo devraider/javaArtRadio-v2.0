@@ -33,6 +33,9 @@ public class RadioSong {
     @Column(name = "youtube_id")
     private String youtubeId;
 
+    @Column(name = "active")
+    private int active;
+
     @Column(name = "date_stream_played")
     @CreationTimestamp
     private Date dateStreamPlayed;
