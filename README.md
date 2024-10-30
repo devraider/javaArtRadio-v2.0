@@ -2,12 +2,15 @@
 # javaArtRadio 2.0 - A Spring boot backend app
 
 This is the backend support for web application for a newer version of ArtRadio (for first version you can check [djangoArtRadio V1](https://github.com/devraider/djangoArtRadio-v1.0.0)).
+
 ArtRadio it's an ad-free online radio player.
+
 
 > [!note]
 > This project using:
 > - JavaScript, Angular framework as frontend – code could be found: [ngArtRadio - Angular](https://github.com/devraider/ngArtRadio-v2.0)
 > - Python, as crawler to collect songs from different radio stations – code could be found: [pyArtRadio - Python](https://github.com/devraider/pyArtRadio-v2.0)
+
 
 
 ## Features
