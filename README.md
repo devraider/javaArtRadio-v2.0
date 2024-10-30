@@ -1,7 +1,7 @@
 
 # javaArtRadio 2.0 - A Spring boot backend app
 
-This is the backend support for web application for a newer version of ArtRadio (for first version you can check [djangoArtRadio V1](https://github.com/devraider/djangoArtRadio-v1.0.0)).
+This is the backend support for web application for a newer version of ArtRadio (for first version you can check [djangoArtRadio V1](https://github.com/devraider/djangoArtRadio-v1.0)).
 
 ArtRadio it's an ad-free online radio player.
 
